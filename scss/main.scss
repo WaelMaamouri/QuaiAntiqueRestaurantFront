@@ -6,7 +6,7 @@ html{
 }
 
 main{
-    margin-bottom: 250px;
+    margin-bottom: 270px;
 }
 
 footer.footer{
@@ -38,9 +38,34 @@ p{
     position: relative;
 }    
 }
-.hero-scene-content{
-
-}
 .text-justify{
     text-align: justify;
 }
+.image-card{
+    position: relative;
+    &:hover{
+        .titre-image{
+            opacity: 1;
+        }
+    }
+
+    .titre-image{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+    }
+    .action-image-buttons{
+        background-color: red($color: #000000);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        }
+}
+

@@ -11989,6 +11989,7 @@ main {
   margin-bottom: 253px;
 }
 .hero-scene {
+    margin-bottom: 15px;
     position: relative;
     &::before {
         content: "";
@@ -12017,6 +12018,48 @@ main {
         margin-top: -15px;
     }
 }
+.image-card{
+    position: relative;
+    &:hover{
+        .titre-image{
+            opacity: 1;
+        }
+        img{
+            filter: brightness(0.3);
+        }
+        .action-image-buttons{
+            opacity: 1;
+        }
+        }
+    
+    .img{
+        transition: all 0.3s;
+    }
+
+    .titre-image{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        opacity: 0;
+        transition: all 0.3s;
+    }
+    .action-image-buttons{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        opacity: 0;
+        transition: all 0.3s;
+        }
+    .form-label{
+  color: #906427;
+}}
+
 footer.footer {
   padding: 15px;
   position: absolute;
