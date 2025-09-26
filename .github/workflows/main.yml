@@ -7,18 +7,20 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v4
-    
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+
+    - name: 📂 Sync files via SFTP
+      uses: appleboy/scp-action@master
       with:
-        server: ftp-quaiantique1.alwaysdata.net
-        username: quaiantique1
-        password: ${{ secrets.ftp_password }}
-        protocol: ftps
+        host: ${{ secrets.SFTP_HOST }}
+        username: ${{ secrets.SFTP_USERNAME }}
+        password: ${{ secrets.SFTP_PASSWORD }}
+        source: "."
+        target: "/www/"
+        rm: true
+        strip_components: 1
+        # Exclusions similaires à ce que tu as dans FTP-Deploy
         exclude: |
-          **/.git*
-          **/.git*/**
-          **/node_modules/bootstrap/scss/**
-          **/node_modules/bootstrap/js/**
-          **/node_modules/bootstrap-icons/icons/**  
-        server-dir: /www/
+          .git*
+          node_modules/bootstrap/scss/
+          node_modules/bootstrap/js/
+          node_modules/bootstrap-icons/icons/
