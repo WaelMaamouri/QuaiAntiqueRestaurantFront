@@ -1,0 +1,59 @@
+<div class="hero-scene text-center text-white">
+    <div class="hero-scene-content">
+      <h1>Vos réservations</h1>
+    </div>
+</div>
+<div class="container text-center mb-4">
+    <a href="#/reserver" class="btn btn-primary">Réserver</a>
+</div>
+<div class="container text-center allReservations">
+    <a href="#/"data-bs-toggle="modal"data-bs-target="#editionReservation">
+        <span>20/09/2025</span>
+        <span>12:00</span>
+        <span>6 personnes</span>
+        <span>Pas d'allergie</span>
+    </a>    
+    <a href="#/"data-bs-toggle="modal"data-bs-target="#editionReservation">
+        <span>20/09/2025</span>
+        <span>12:00</span>
+        <span>6 personnes</span>
+        <span>Pas d'allergie</span>
+    </a>
+    <a href="#/"data-bs-toggle="modal"data-bs-target="#editionReservation">
+        <span>20/09/2025</span>
+        <span>12:00</span>
+        <span>6 personnes</span>
+        <span>Pas d'allergie</span>
+    </a>    
+    <a href="#/"data-bs-toggle="modal"data-bs-target="#editionReservation">
+        <span>20/09/2025</span>
+        <span>12:00</span>
+        <span>6 personnes</span>
+        <span>Pas d'allergie</span>
+    
+    </a>
+</div>
+<!-- Modal édition -->
+<div class="modal fade" id="editionReservation" tabindex="-1" aria-labelledby="editionReservationModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="editionReservationModalLabel">Édition Réservation</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="ReservationInput" class="form-label">Réservation</label>
+            <input type="text" class="form-control" id="ReservationInput" placeholder="Réservation n°1" aria-describedby="reservationHelp">
+            <div id="reservationHelp" class="form-text">Entrez un nom ou un numéro de réservation.</div>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Modifier</button>
+            <button type="button" class="btn btn-danger">Supprimer</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

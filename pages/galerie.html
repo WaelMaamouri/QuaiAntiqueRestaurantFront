@@ -7,62 +7,8 @@
     <div class="text-center">
         <button type="button" class="btn btn-primary"data-bs-toggle="modal" data-bs-target="#editionPhotoModal">Ajouter une photo</button>
     </div>
-     <div class="row row-cols-2 row-cols-lg-3">
-        <div class="col p-3">
-            <div class="image-card text-white">
-                <img src="../images/chef.jpg" class="rounded w-100"/>
-                <p class="titre-image">Titre</p>
-                <div class="action-image-buttons">
-                    <button type="button" class="btn btn-outline-light"data-bs-toggle="modal" data-bs-target="#editionPhotoModal" ><i class="bi bi-pencil-square"></i></button>
-                    <button type="button" class="btn btn-outline-light"data-bs-toggle="modal" data-bs-target="#deletePhotoModal"><i class="bi bi-trash"></i></button>  
-                </div>
-            </div>    
-        </div>
-        <div class="col p-3">
-            <div class="image-card text-white">
-                <img src="../images/galerie2.jpg" class="rounded w-100"/>
-                <p class="titre-image">Titre</p>
-                <div class="action-image-buttons">
-                    <button type="button" class="btn btn-outline-light"data-bs-toggle="modal" data-bs-target="#editionPhotoModal"><i class="bi bi-pencil-square"></i></button>
-                    <button type="button" class="btn btn-outline-light"data-bs-toggle="modal" data-bs-target="#deletePhotoModal"><i class="bi bi-trash"></i></button>    
-                </div>
-            </div>
-        </div>
-        <div class="col p-3">
-            <div class="image-card text-white">
-                 <img src="../images/galerie1.jpg" class="rounded w-100"/>
-                 <p class="titre-image">Titre</p>
-                <div class="action-image-buttons">
-                    <button type="button" class="btn btn-outline-light"data-bs-toggle="modal" data-bs-target="#editionPhotoModal"><i class="bi bi-pencil-square"></i></button>
-                    <button type="button" class="btn btn-outline-light"data-bs-toggle="modal" data-bs-target="#deletePhotoModal"><i class="bi bi-trash"></i></button>    
-                </div>
-            </div>    
-        </div>
-        <div class="col p-3">
-            <div class="image-card text-white">
-                <img src="../images/galerie4.jpg" class="rounded w-100"/>
-                <p class="titre-image">Titre</p>
-                <div class="action-image-buttons">
-                    <button type="button" class="btn btn-outline-light"data-bs-toggle="modal" data-bs-target="#editionPhotoModal"><i class="bi bi-pencil-square"></i></button>
-                    <button type="button" class="btn btn-outline-light"data-bs-toggle="modal" data-bs-target="#deletePhotoModal"><i class="bi bi-trash"></i></button>    
-                </div>
-            </div>
-        </div>
-        <div class="col p-3">
-            <div class="image-card text-white">
-                <img src="../images/galerie5.jpg" class="rounded w-100"/>
-                <p class="titre-image">Titre</p>
-                <div class="action-image-buttons">
-                    <button type="button" class="btn btn-outline-light"data-bs-toggle="modal" data-bs-target="#editionPhotoModal"><i class="bi bi-pencil-square"></i></button>
-                    <button type="button" class="btn btn-outline-light"data-bs-toggle="modal" data-bs-target="#deletePhotoModal"><i class="bi bi-trash"></i></button>    
-                </div>
-            </div>
-        </div>
-        <div class="col p-3">
-            <div class="image-card text-white">
-                <img src="../images/galerie3.jpg" class="rounded w-100"/>
-                <p class="titre-image">Titre</p>
-                <div class="action-image-buttons">
+     <div class="row row-cols-2 row-cols-lg-3" id="allImages"></div>
+
                     <button type="button" class="btn btn-outline-light"data-bs-toggle="modal" data-bs-target="#editionPhotoModal"><i class="bi bi-pencil-square"></i></button>
                     <button type="button" class="btn btn-outline-light"data-bs-toggle="modal" data-bs-target="#deletePhotoModal"><i class="bi bi-trash"></i></button>    
                 </div>
@@ -115,7 +61,7 @@
   </div>
   <div class="mb-3">
     <p>Titre</p>
-    <img src="../images/chef.jpg" class="rounded w-100"/>
+    <img src="../images/chef.jpg" class="rounded w-100" alt="Chef"/>
   <div class="mb-3">
   <button type="button" class="btn btn-danger">Supprimer</button>
     <button type="button" class="btn btn-secondary"data-bs-dismiss="modal">Annuler</button>

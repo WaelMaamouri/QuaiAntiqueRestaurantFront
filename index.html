@@ -28,20 +28,23 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#/galerie" onclick="route(event)">Galerie</a>
+          <a class="nav-link" href="#/allResa" onclick="route(event)">Les réservations</a>
         </li>
 
         <li class="nav-item">
           <a class="nav-link" href="#">La carte</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Les réservation</a>
+          <a class="nav-link" href="#/galerie" onclick="route(event)">Galerie</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#/account" onclick="route(event)">Mon compte</a>
         </li>
-        <li class="nav-item">
+      <li class="nav-item" data-show="disconnected">
           <a class="nav-link" href="#/signin" onclick="route(event)">Connexion</a>
+        </li>
+        <li class="nav-item"data-show="connected">
+          <button class="nav-link" id="signout-btn">Deconnexion</button>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#/signup" onclick="route(event)">Inscription</a>
@@ -59,7 +62,7 @@
         <div class="row">
             <div class="col-12 col-lg-4">
             <h3 class="text-primary">Nos horaires</h3>
-                <p>Du mardi au dimanche   12:00-14:00   18:00-23:00</p>
+                <p>Du mardi au dimanche   12:00-14:00   19:00-21:00</p>
             </div>
         <div class="col-6 col-lg-4">
             <p>Quai Antique <br>
@@ -72,8 +75,8 @@
             <p>contact@quaiantique.com</p>
         </div>
     </footer>
-   
+    <script src="js/script.js"></script>
    <script type="module" src="./Router/router.js"></script>
    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 </html>
