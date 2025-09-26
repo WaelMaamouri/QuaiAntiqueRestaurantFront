@@ -13,7 +13,7 @@ jobs:
       with:
         server: ftp-quaiantique1.alwaysdata.net
         username: quaiantique1
-        password: ${{ secrets.ftp_password }}$
+        password: ${{ secrets.ftp_password }}
         protocol: ftps
         exclude: |
           **/.git*
