@@ -11,16 +11,10 @@ jobs:
     - name: 📂 Sync files via SFTP
       uses: appleboy/scp-action@master
       with:
-        host: ${{ secrets.SFTP_HOST }}
-        username: ${{ secrets.SFTP_USERNAME }}
+        host: ftp-quaiantique1.alwaysdata.net
+        username: quaiantique1
         password: ${{ secrets.SFTP_PASSWORD }}
-        source: "."
-        target: "/www/"
+        source: "."            # Tout le projet
+        target: "/www/"        # Dossier distant
         rm: true
         strip_components: 1
-        # Exclusions similaires à ce que tu as dans FTP-Deploy
-        exclude: |
-          .git*
-          node_modules/bootstrap/scss/
-          node_modules/bootstrap/js/
-          node_modules/bootstrap-icons/icons/
