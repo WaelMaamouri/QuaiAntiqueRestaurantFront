@@ -1,23 +1,29 @@
-on: push
+on:
+  push:
+    branches:
+      - main   # déploie uniquement quand tu push sur main
+
 name: 🚀 Deploy website on push
+
 jobs:
   web-deploy:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v4
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
 
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.6
-      with:
-        server: ftp-quaiantique1.alwaysdata.net
-        username: quaiantique1
-        password: ${{ secrets.ftp_password }}
-        exclude: |
-          **/.git*
-          **/.git*/**
-          **/node_modules/bootstrap/scss/**
-          **/node_modules/bootstrap/js/**
-          **/node_modules/bootstrap-icons/icons/**  
-        server-dir: /www/
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+        with:
+          server: ftp-quaiantique1.alwaysdata.net
+          username: quaiantique1
+          password: ${{ secrets.ftp_password }}
+          protocol: ftps
+          server-dir: /www/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/bootstrap/scss/**
+            **/node_modules/bootstrap/js/**
+            **/node_modules/bootstrap-icons/icons/**
