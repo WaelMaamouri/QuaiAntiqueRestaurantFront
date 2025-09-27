@@ -19,10 +19,10 @@ jobs:
           server: ftp-quaiantique1.alwaysdata.net
           username: quaiantique1
           password: ${{ secrets.ftp_password }}
-          protocol: ftps
+          protocol: ftps-legacy
           port: 21
           server-dir: /
-          state-name: .ftp-deploy-sync-state.json
+          state-name: .ftp-sync-state.json
           exclude: |
             **/.git*
             **/.git*/**
