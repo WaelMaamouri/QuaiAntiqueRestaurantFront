@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - main   # déploie uniquement quand tu push sur main
+      - main
 
 name: 🚀 Deploy website on push
 
@@ -16,10 +16,11 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
-          server: ftp-quaiantique1.alwaysdata.net
+          server: ssh-quaiantique1.alwaysdata.net
           username: quaiantique1
           password: ${{ secrets.ftp_password }}
-          protocol: ftps
+          protocol: sftp
+          port: 22
           server-dir: /www/
           exclude: |
             **/.git*
