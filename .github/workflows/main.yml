@@ -17,14 +17,13 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
           server: ftp-quaiantique1.alwaysdata.net
-          username: quaiantique1
+          username: quaiantique1_deploy   # ⚠️ ton nouvel utilisateur
           password: ${{ secrets.ftp_password }}
           protocol: ftps
           port: 21
-          server-dir: /www/
+          server-dir: /
+          state-name: .ftp-deploy-sync-state.json
           exclude: |
             **/.git*
             **/.git*/**
-            **/node_modules/bootstrap/scss/**
-            **/node_modules/bootstrap/js/**
-            **/node_modules/bootstrap-icons/icons/**
+            **/node_modules/**
