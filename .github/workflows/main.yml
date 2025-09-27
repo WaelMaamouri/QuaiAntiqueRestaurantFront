@@ -1,25 +1,28 @@
 on:
   push:
     branches:
-      - main
+      - main   # déploiement uniquement sur la branche main
 
-name: 🚀 Deploy website on push
+name: 🚀 Deploy website via FTPS (AlwaysData gratuit)
 
 jobs:
   web-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      # Récupérer le code du repo
+      - name: 🚚 Checkout code
+        uses: actions/checkout@v4
 
+      # Déploiement FTPS
       - name: 📂 Deploy via FTPS legacy
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
           server: ftp-quaiantique1.alwaysdata.net
           username: quaiantique1
           password: ${{ secrets.ftp_password }}
-          protocol: ftps-legacy
+          protocol: ftps-legacy        # FTPS explicite compatible AlwaysData gratuit
           port: 21
-          server-dir: /
+          server-dir: /                # utilisateur chrooté dans /home/quaiantique1/www/
           state-name: .ftp-deploy-sync-state.json
           exclude: |
             **/.git*
