@@ -17,11 +17,10 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
           server: ftp-quaiantique1.alwaysdata.net
-          username: quaiantique1        # ton user FTP
+          username: quaiantique1
           password: ${{ secrets.ftp_password }}
-          protocol: ftps               # FTPS explicite
           port: 21
-          server-dir: /                 # l’utilisateur est chrooté dans /home/quaiantique1/www/
+          server-dir: /
           state-name: .ftp-deploy-sync-state.json
           exclude: |
             **/.git*
