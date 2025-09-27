@@ -7,23 +7,24 @@ name: 🚀 Deploy website on push
 
 jobs:
   web-deploy:
-    name: 🎉 Deploy
+    name: 🎉 Deploy via FTPS
     runs-on: ubuntu-latest
     steps:
       - name: 🚚 Get latest code
         uses: actions/checkout@v4
 
-      - name: 📂 Sync files
+      - name: 📂 Sync files via FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
           server: ftp-quaiantique1.alwaysdata.net
-          username: quaiantique1
+          username: quaiantique1        # ton user FTP
           password: ${{ secrets.ftp_password }}
-          protocol: ftps-legacy
+          protocol: ftps               # FTPS explicite
           port: 21
-          server-dir: /
-          state-name: .ftp-sync-state.json
+          server-dir: /                 # l’utilisateur est chrooté dans /home/quaiantique1/www/
+          state-name: .ftp-deploy-sync-state.json
           exclude: |
             **/.git*
             **/.git*/**
             **/node_modules/**
+
