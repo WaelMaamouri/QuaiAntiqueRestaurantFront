@@ -17,7 +17,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
           server: ftp-quaiantique1.alwaysdata.net
-          username: quaiantique1_deploy   # ⚠️ ton nouvel utilisateur
+          username: quaiantique1
           password: ${{ secrets.ftp_password }}
           protocol: ftps
           port: 21
